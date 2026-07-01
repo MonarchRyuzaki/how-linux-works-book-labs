@@ -1,0 +1,115 @@
+# Chapter 2: Basic Commands and Directory Hierarchy
+
+## Structural Outline
+- 2.1 The Bourne Shell: /bin/sh
+- 2.2 Using the Shell
+  - 2.2.1 The Shell Window
+  - 2.2.2 cat
+  - 2.2.3 Standard Input and Standard Output
+- 2.3 Basic Commands
+  - 2.3.1 ls
+  - 2.3.2 cp
+  - 2.3.3 mv
+  - 2.3.4 touch
+  - 2.3.5 rm
+  - 2.3.6 echo
+- 2.4 Navigating Directories
+  - 2.4.1 cd
+  - 2.4.2 mkdir
+  - 2.4.3 rmdir
+  - 2.4.4 Shell Globbing (“Wildcards”)
+- 2.5 Intermediate Commands
+  - 2.5.1 grep
+  - 2.5.2 less
+  - 2.5.3 pwd
+  - 2.5.4 diff
+  - 2.5.5 file
+  - 2.5.6 find and locate
+  - 2.5.7 head and tail
+  - 2.5.8 sort
+- 2.6 Changing Your Password and Shell
+- 2.7 Dot Files
+- 2.8 Environment and Shell Variables
+- 2.9 The Command Path
+- 2.10 Special Characters
+- 2.11 Command-Line Editing
+- 2.12 Text Editors
+- 2.13 Getting Online Help
+- 2.14 Shell Input and Output
+  - 2.14.1 Standard Error
+  - 2.14.2 Standard Input Redirection
+- 2.15 Understanding Error Messages
+  - 2.15.1 Anatomy of a Unix Error Message
+  - 2.15.2 Common Errors
+- 2.16 Listing and Manipulating Processes
+  - 2.16.1 ps Command Options
+  - 2.16.2 Process Termination
+  - 2.16.3 Job Control
+  - 2.16.4 Background Processes
+- 2.17 File Modes and Permissions
+  - 2.17.1 Modifying Permissions
+  - 2.17.2 Working with Symbolic Links
+- 2.18 Archiving and Compressing Files
+  - 2.18.1 gzip
+  - 2.18.2 tar
+  - 2.18.3 Compressed Archives (.tar.gz)
+  - 2.18.4 zcat
+  - 2.18.5 Other Compression Utilities
+- 2.19 Linux Directory Hierarchy Essentials
+  - 2.19.1 Other Root Subdirectories
+  - 2.19.2 The /usr Directory
+  - 2.19.3 Kernel Location
+- 2.20 Running Commands as the Superuser
+  - 2.20.1 sudo
+  - 2.20.2 /etc/sudoers
+  - 2.20.3 sudo Logs
+- 2.21 Looking Forward
+
+## Core Concepts
+- **The Bourne Shell**: A shell is a program that executes commands and provides a programming environment. The default on Linux is `bash` (Bourne-again shell), which derives from the original Bourne shell (`/bin/sh`).
+- **Standard Input/Output**: Unix processes rely on I/O streams for data flow. `stdin` (input) and `stdout` (output) enable piping and redirection, letting processes accept data from files/commands and send output uniformly.
+- **Navigating Directories**: The filesystem is rooted at `/`, with relative (`.`, `..`) and absolute paths used for traversal.
+- **Shell Globbing**: The shell automatically expands wildcards (e.g., `*`, `?`) into matching filenames *before* passing them as arguments to underlying programs. 
+- **Environment & Shell Variables**: Variables temporarily store text strings for process configuration and scripts. Shell variables are internal to the shell, while environment variables are exported (e.g., `export STUFF`) and inherited by child processes.
+- **The Command Path**: Controlled by the `PATH` environment variable, it defines a colon-separated list of directories the shell searches when looking for executable programs.
+- **Command-Line Editing & Text Editors**: Emacs and vi are standard terminal-based text editors for modifying plaintext configuration files.
+- **Getting Online Help**: The `man` and `info` systems provide structured reference documentation for commands, system calls, and configuration files organized into sections (e.g. section 1 for commands, section 5 for files, section 8 for system administration).
+- **Shell Input/Output & Redirection**: Output can be routed to files using `>` (overwrite) or `>>` (append). Standard error (`stderr`) is a separate diagnostic stream (`2`) that can be redirected independently (`2>`) or merged with `stdout` (`2>&1`).
+- **Understanding Error Messages**: Unix errors generally specify the program, target file, and error reason (e.g., `ENOENT` for "No such file"). Prioritizing the first error output often resolves cascading failures.
+- **Listing and Manipulating Processes**: Processes are running programs identified by unique PIDs. They can be tracked via statuses (running, sleeping), managed via job control (foreground/background), and communicated with via signals (e.g., `TERM`, `KILL`, `STOP`).
+- **File Modes and Permissions**: File access is governed by three permission sets: user (owner), group, and other (world). Permissions allow reading (`r`), writing (`w`), and executing (`x`), which apply distinctly to files (execution) versus directories (traversal).
+- **Working with Symbolic Links**: Symbolic links act as pointers to other files or directories. They differ from hard links (which point directly to the underlying inode) and can break if the original target is removed.
+- **Archiving and Compressing Files**: Archiving combines multiple files into one (`tar`), while compression reduces file size (`gzip`). A standard workflow groups files into a `.tar` archive and compresses the result into a `.tar.gz` file.
+- **Linux Directory Hierarchy**: The Linux filesystem conforms to the Filesystem Hierarchy Standard (FHS). Key directories include `/bin` for basic user binaries, `/etc` for configuration, `/var` for variable data like logs, and `/usr` for the bulk of user-space programs.
+- **Running Commands as Superuser**: The `sudo` program allows privileged users to execute commands as `root` without starting a full root shell, providing an audit trail via syslog and fine-grained access control through `/etc/sudoers`.
+
+## Commands & Utilities
+- `bash`: Bourne-again shell, the default command interpreter.
+- `cat`: Concatenates and prints file contents to stdout.
+- `ls`: Lists directory contents. Useful flags: `-l` (long format), `-F` (file type indicators), `-a` (show dot files).
+- `cp` / `mv`: Copies / Moves or renames files or directories.
+- `touch`: Creates an empty file or updates the modification timestamp.
+- `rm` / `rmdir`: Removes a file / empty directory.
+- `echo`: Prints arguments to stdout.
+- `cd` / `pwd`: Changes / Prints the current working directory.
+- `mkdir`: Creates directories.
+- `grep`: Prints lines matching a pattern or regular expression. Flags: `-i` (case-insensitive), `-v` (invert match).
+- `less`: A pager that displays text one screenful at a time.
+- `diff`: Compares two files line by line to show differences.
+- `file`: Determines file type based on format/magic bytes.
+- `find` / `locate`: Searches for files.
+- `head` / `tail`: Outputs the first or last parts of files.
+- `sort`: Sorts lines of text files.
+- `passwd`: Changes user password.
+- `chsh`: Changes the default login shell.
+- `man` / `info`: Displays system reference manuals and documentation.
+- `ps`: Reports a snapshot of current processes.
+- `kill`: Sends signals to a process.
+- `jobs`, `fg`, `bg`: Utilities for job control.
+- `chmod`: Changes file access permissions.
+- `umask`: Sets the default file permission mask.
+- `ln`: Creates links between files. Use `-s` for symbolic links.
+- `gzip` / `gunzip` / `zcat`: Compresses, decompresses, or outputs compressed file contents to stdout.
+- `tar`: Tape archive utility used to bundle/extract files. Flags: `c` (create), `x` (extract), `t` (table), `v` (verbose), `f` (file), `z` (filter through gzip).
+- `sudo`: Executes a command as another user.
+- `visudo`: Safely edits the `/etc/sudoers` file.
