@@ -8,3 +8,9 @@
 - **Action**: Used `active_practice_generator` to create 7 structured scenario-based tasks (`task-01.md` through `task-07.md`).
 - **Action**: Graded user solutions and appended `**Correction:**` blocks to all task files.
 - **Status**: Chapter 2 completed. Ready for Chapter 3.
+
+### [2026-07-02] Chapter 3: Devices
+- **Action**: Used `pdf_chapter_extractor` to process pages 71-91 and generated `chapter03/core-concept.md`.
+- **Action**: Used `active_practice_generator` to create 6 scenario-based tasks (`task-01.md` through `task-06.md`).
+- **Action**: Graded user solutions and appended `**Correction:**` blocks to all task files.
+- **Status**: Chapter 3 completed. Ready for Chapter 4.
