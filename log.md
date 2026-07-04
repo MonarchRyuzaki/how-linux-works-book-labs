@@ -14,3 +14,12 @@
 - **Action**: Used `active_practice_generator` to create 6 scenario-based tasks (`task-01.md` through `task-06.md`).
 - **Action**: Graded user solutions and appended `**Correction:**` blocks to all task files.
 - **Status**: Chapter 3 completed. Ready for Chapter 4.
+
+### [2026-07-02] Chapter 4: Disks and Filesystems
+- **Action**: Extracted pages 93-139 to `chapter04/raw_text.txt`.
+- **Action**: User paused standard SOP to review theory up to page 97. Applied `deep-reader` skill principles to break down partitions, MBR vs GPT, and fdisk vs parted.
+- **Action**: User completed reading the chapter. Practiced LVM and partitioning via loop devices safely.
+- **Action**: Extracted 10 key concepts into separate markdown files in `chapter04/concepts/` (Partitioning, Filesystems, Mount/UUID, Remounting, fsck, Swap, LVM, Device Mapper, Inodes/Hardlinks, Bitmaps).
+- **Action**: Used `active_practice_generator` to create 7 structured scenario-based tasks (`task-01.md` through `task-07.md`), including "DO" lab tasks for LVM and loop devices.
+- **Action**: Graded user solutions and appended `**Correction:**` blocks to all task files.
+- **Status**: Chapter 4 completed. Ready for Chapter 5.
