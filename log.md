@@ -23,3 +23,8 @@
 - **Action**: Used `active_practice_generator` to create 7 structured scenario-based tasks (`task-01.md` through `task-07.md`), including "DO" lab tasks for LVM and loop devices.
 - **Action**: Graded user solutions and appended `**Correction:**` blocks to all task files.
 - **Status**: Chapter 4 completed. Ready for Chapter 5.
+
+### [2026-07-05] Chapter 5: How the Linux Kernel Boots
+- **Action**: Extracted pages 141-159 to `chapter05/raw_text.txt`.
+- **Action**: By user request, skipped task generation due to low SRE relevance (GRUB/UEFI/Chainloading). Generated a streamlined `chapter05/core-concept.md` focused exclusively on `dmesg`, kernel initialization, and boot parameters.
+- **Status**: Chapter 5 completed. Ready for Chapter 6.
