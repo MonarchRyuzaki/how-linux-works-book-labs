@@ -5,8 +5,9 @@ This repository contains notes and active practice labs for studying "How Linux 
 
 ## User Profile & Calibrations
 - **User Profile**: Fresher SRE starting at JPMC.
-- **Current Baseline**: Has a highly practical cheatsheet covering advanced Linux/Systems concepts (inodes, AppArmor, `nsswitch.conf`, `iptables`, systemd). However, many previous scenarios were solved with AI assistance.
-- **Pedagogical Goal**: Calibrate all AI `active_practice_generator` scenarios to a **Junior/Mid SRE level** (not Staff-level). The focus is on building deep independent intuition and understanding the "why" to connect practical knowledge with core OS fundamentals.
+- **Current Baseline**: Has a highly practical cheatsheet covering advanced Linux/Systems concepts. Previous scenarios were heavily AI-assisted. **Crucially, learns best by DOING (hands-on) rather than reading dense theory.**
+- **Pedagogical Goal**: Calibrate scenarios to a **Junior/Mid SRE level**. Build independent intuition. 
+- **Pivot Strategy:** Treat the book as a reference, not a primary teacher. Output very concise `core-concept.md` summaries and immediately jump into `active_practice_generator` tasks. The struggle of solving tasks is the primary learning vehicle.
 
 ## Standard Operating Procedure (SOP)
 When processing a new chapter in a fresh chat, the AI agent should read this file and follow this exact sequence:

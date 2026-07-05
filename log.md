@@ -28,3 +28,11 @@
 - **Action**: Extracted pages 141-159 to `chapter05/raw_text.txt`.
 - **Action**: By user request, skipped task generation due to low SRE relevance (GRUB/UEFI/Chainloading). Generated a streamlined `chapter05/core-concept.md` focused exclusively on `dmesg`, kernel initialization, and boot parameters.
 - **Status**: Chapter 5 completed. Ready for Chapter 6.
+
+### [2026-07-05] Chapter 6: How User Space Starts (init & systemd)
+- **Action**: Extracted pages 161-189 to `chapter06/raw_text.txt`.
+- **Action**: User requested a pivot in learning style. Updated `WORKFLOW.md` to prioritize hands-on tasks over reading theory.
+- **Action**: Generated `chapter06/core-concept.md` as a quick reference.
+- **Action**: Used `active_practice_generator` to create 7 scenario-based tasks (`task-01.md` through `task-07.md`) blending Mode B and Mode A.
+- **Action**: Graded user solutions and appended `**Correction:**` blocks to all task files.
+- **Status**: Chapter 6 completed. Ready for Chapter 7.
