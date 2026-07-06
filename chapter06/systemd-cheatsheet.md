@@ -58,6 +58,21 @@
 
 ---
 
+## ⏱️ The `[Timer]` Section (For .timer files)
+*Controls scheduled execution of services (replaces cron).* 
+*(Note: A timer unit requires a corresponding `.service` unit of the same name to execute).* 
+
+| Key | Values / Usage | What it does |
+| :--- | :--- | :--- |
+| `OnActiveSec=` | Time (e.g., `5m`) | Starts the service 5 minutes after the timer itself is activated. |
+| `OnBootSec=` | Time (e.g., `15min`) | Starts the service 15 minutes after the system boots. |
+| `OnUnitActiveSec=`| Time (e.g., `1h`) | Starts the service 1 hour after the *service* was last successfully activated (creates a recurring loop). |
+| `OnCalendar=` | Cron-like string | Triggers based on calendar time (e.g., `*-*-* 02:00:00` runs daily at 2 AM). Use `systemd-analyze calendar "expr"` to validate. |
+| `Unit=` | Service name (e.g., `backup.service`) | Explicitly names the service to trigger. (Optional if the timer and service have the exact same name). |
+| `Persistent=` | `true` or `false` | **`true`**: If the system was off when the timer was scheduled to run, it will run immediately when the system boots (similar to `anacron`). |
+
+---
+
 ## 🚀 The `[Install]` Section
 *Controls what happens when you run `systemctl enable`.*
 

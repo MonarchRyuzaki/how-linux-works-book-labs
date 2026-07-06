@@ -36,3 +36,10 @@
 - **Action**: Used `active_practice_generator` to create 7 scenario-based tasks (`task-01.md` through `task-07.md`) blending Mode B and Mode A.
 - **Action**: Graded user solutions and appended `**Correction:**` blocks to all task files.
 - **Status**: Chapter 6 completed. Ready for Chapter 7.
+
+### [2026-07-06] Chapter 7: System Configuration: Logging, System Time, Batch Jobs, and Users
+- **Action**: Extracted pages 191-222 to `chapter07/raw_text.txt`.
+- **Action**: Generated `chapter07/core-concept.md` containing the structural outline and core concepts.
+- **Action**: Used `active_practice_generator` to create 6 scenario-based tasks (`task-01.md` through `task-06.md`).
+- **Action**: Graded user solutions and appended `**Correction:**` blocks to all task files.
+- **Status**: Chapter 7 completed. Ready for Chapter 8.
