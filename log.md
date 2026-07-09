@@ -43,3 +43,19 @@
 - **Action**: Used `active_practice_generator` to create 6 scenario-based tasks (`task-01.md` through `task-06.md`).
 - **Action**: Graded user solutions and appended `**Correction:**` blocks to all task files.
 - **Status**: Chapter 7 completed. Ready for Chapter 8.
+
+### [2026-07-06] Chapter 8: A Closer Look at Processes and Resource Utilization
+- **Action**: Extracted pages 223-248 to `chapter08/raw_text.txt`.
+- **Action**: Generated `chapter08/core-concept.md` containing the structural outline and core concepts.
+- **Action**: Used `active_practice_generator` to create 6 scenario-based tasks (`task-01.md` through `task-06.md`).
+- **Action**: Graded user solutions and appended `**Correction:**` blocks to all task files.
+- **Status**: Chapter 8 completed. Ready for Chapter 9.
+
+### [2026-07-08] Chapter 9: Understanding Your Network and Its Configuration
+- **Action**: Extracted pages 247-292 to `chapter09/raw_text.txt`.
+- **Action**: Generated `chapter09/core-concept.md` containing the structural outline and core concepts.
+- **Action**: User paused standard SOP to map bare-metal networking concepts to AWS equivalents (VPC, IGW, NAT, Security Groups).
+- **Action**: Extracted key SRE concepts into `chapter09/concepts/` (Unicast, DHCP/SLAAC, Linux Router/NAT, Firewalls/iptables, TCP/UDP Ports, DNS Resolution Pipeline).
+- **Action**: Generated `chapter09/active-practice.md` featuring a Mode E "AWS VPC on Bare-Metal Linux" masterclass lab using `ip netns`.
+- **Action**: Generated `chapter09/dns-tasks.md` featuring Mode B and Mode A DNS sabotage tasks.
+- **Status**: Chapter 9 completed. Ready for Chapter 10.
