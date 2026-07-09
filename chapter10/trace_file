@@ -1,0 +1,34 @@
+== Info:   Trying 127.0.0.1:8000...
+== Info: Connected to localhost (127.0.0.1) port 8000 (#0)
+=> Send header, 78 bytes (0x4e)
+0000: GET / HTTP/1.1
+0010: Host: localhost:8000
+0026: User-Agent: curl/7.81.0
+003f: Accept: */*
+004c: 
+== Info: Mark bundle as not supporting multiuse
+== Info: HTTP 1.0, assume close after body
+<= Recv header, 54 bytes (0x36)
+0000: HTTP/1.0 500 Internal Application Crash: NullPointer
+<= Recv header, 37 bytes (0x25)
+0000: Server: BaseHTTP/0.6 Python/3.10.12
+<= Recv header, 37 bytes (0x25)
+0000: Date: Thu, 09 Jul 2026 17:09:29 GMT
+<= Recv header, 19 bytes (0x13)
+0000: Connection: close
+<= Recv header, 39 bytes (0x27)
+0000: Content-Type: text/html;charset=utf-8
+<= Recv header, 21 bytes (0x15)
+0000: Content-Length: 476
+<= Recv header, 2 bytes (0x2)
+0000: 
+<= Recv data, 476 bytes (0x1dc)
+0000: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN".        "http:
+0040: //www.w3.org/TR/html4/strict.dtd">.<html>.    <head>.        <me
+0080: ta http-equiv="Content-Type" content="text/html;charset=utf-8">.
+00c0:         <title>Error response</title>.    </head>.    <body>.   
+0100:      <h1>Error response</h1>.        <p>Error code: 500</p>.    
+0140:     <p>Message: Internal Application Crash: NullPointer.</p>.   
+0180:      <p>Error code explanation: 500 - Server got itself in troub
+01c0: le.</p>.    </body>.</html>.
+== Info: Closing connection 0

@@ -59,3 +59,11 @@
 - **Action**: Generated `chapter09/active-practice.md` featuring a Mode E "AWS VPC on Bare-Metal Linux" masterclass lab using `ip netns`.
 - **Action**: Generated `chapter09/dns-tasks.md` featuring Mode B and Mode A DNS sabotage tasks.
 - **Status**: Chapter 9 completed. Ready for Chapter 10.
+
+### [2026-07-09] Chapter 10: Network Applications and Services
+- **Action**: Extracted pages 293-314 to `chapter10/raw_text.txt`.
+- **Action**: Generated `chapter10/core-concept.md` containing the structural outline and core concepts, later appending a Deep Dive on Unix Domain Sockets.
+- **Action**: Used `active_practice_generator` to create 6 scenario-based tasks (`task-01.md` through `task-06.md`).
+- **Action**: Debugged tricky SSH fallback mechanisms (`::1` loopback resolving) with the user during Task 02.
+- **Action**: Graded user solutions and appended `**Correction:**` blocks to all task files.
+- **Status**: Chapter 10 completed. Ready for Chapter 11.
