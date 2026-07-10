@@ -82,3 +82,11 @@
 - **Action**: User decided to skip Chapters 13, 14, 15, and 16, and will jump directly to Chapter 17 after this. Reason: These chapters cover Desktop Environments, Audio/Video, X11, and introductory C compilers, which are irrelevant to a modern SRE/Platform Engineer focused on infrastructure and automation.
 - **Action**: User completed all 6 tasks with 100% accuracy. Graded and closed out the chapter.
 - **Status**: Chapter 12 completed. Ready for Chapter 17.
+
+### [2026-07-10] Chapter 17: Virtualization
+- **Action**: Extracted pages 425-442 to `chapter17/raw_text.txt`.
+- **Action**: Generated `chapter17/core-concept.md` containing the structural outline and core concepts (Virtual Machines vs Containers, Docker, overlay filesystems).
+- **Action**: Used `active_practice_generator` to create 6 scenario-based tasks (`task-01.md` through `task-06.md`) blending Mode B and Mode A.
+- **Action**: Graded user solutions and appended `**Correction:**` blocks to all task files.
+- **Action**: Appended "Deep Dive: Docker Internals & SRE Troubleshooting" to `chapter17/core-concept.md` based on missed concepts.
+- **Status**: Chapter 17 completed. Ready for Chapter 18.
