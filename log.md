@@ -67,3 +67,11 @@
 - **Action**: Debugged tricky SSH fallback mechanisms (`::1` loopback resolving) with the user during Task 02.
 - **Action**: Graded user solutions and appended `**Correction:**` blocks to all task files.
 - **Status**: Chapter 10 completed. Ready for Chapter 11.
+
+### [2026-07-10] Chapter 11: Introduction to Shell Scripts
+- **Action**: Extracted pages 315-338 to `chapter11/raw_text.txt`.
+- **Action**: Generated `chapter11/core-concept.md` containing the structural outline and core concepts.
+- **Action**: User paused standard SOP to read the chapter. Strategic pivot: focusing on code comprehension, reading logic, and debugging rather than syntax memorization, recognizing that AI will often write the boilerplate bash code.
+- **Action**: Used `active_practice_generator` to create 6 scenario-based tasks (`task-01.md` through `task-06.md`) blending Mode A and Mode B.
+- **Action**: User experienced burnout. Graded partial answers (Task 02, 03, 04) and appended complete `**Correction:**` solutions to all 6 task files.
+- **Status**: Chapter 11 completed. Ready for Chapter 12.
