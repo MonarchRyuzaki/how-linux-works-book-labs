@@ -36,3 +36,16 @@
 
 ## 6. FUSE & Cloud Storage
 - FUSE (File System in User Space) allows modern clients (like S3 buckets) to be mounted as local directories without kernel modifications, bridging modern cloud APIs with traditional POSIX file access.
+
+---
+
+## Summary Comparison
+
+| Method | Features | Advantages | Disadvantages | Best Use Case |
+| :--- | :--- | :--- | :--- | :--- |
+| **Python HTTP Server** | Ad-hoc web server on port 8000 | Zero config, works instantly | Unencrypted, unauthenticated, read-only | Quick, temporary LAN file sharing |
+| **`rsync`** | Differential sync, compression, dry-runs | Efficiently syncs large/deep directories, bandwidth limits | Not a real-time mount, syntax is prone to human error (`/`) | Automated backups, massive data migrations |
+| **Samba / CIFS** | SMB protocol interoperability | Bridges Linux with Windows networks | Complex server config (`smb.conf`), separate password DB | Sharing files/printers in mixed Windows/Linux environments |
+| **SSHFS** | User-space (FUSE) mount via SSH | Zero server setup, natively encrypted | High CPU/overhead, hangs when network drops | Remote development, mounting codebases securely |
+| **NFS** | Traditional kernel-level Unix mount | Low overhead, extremely fast throughput | Weak native security (IP-based, cleartext) | High-performance isolated LAN clusters (e.g., rendering nodes) |
+| **Cloud FUSE (S3)**| User-space translation of cloud APIs | Infinite scalability, no hardware management | Very high latency compared to local blocks | Archival, managed off-site backups |
