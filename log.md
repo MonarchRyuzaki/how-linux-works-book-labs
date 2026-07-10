@@ -75,3 +75,10 @@
 - **Action**: Used `active_practice_generator` to create 6 scenario-based tasks (`task-01.md` through `task-06.md`) blending Mode A and Mode B.
 - **Action**: User experienced burnout. Graded partial answers (Task 02, 03, 04) and appended complete `**Correction:**` solutions to all 6 task files.
 - **Status**: Chapter 11 completed. Ready for Chapter 12.
+### [2026-07-10] Chapter 12: Network File Transfer and Sharing
+- **Action**: Extracted pages 339-358 to `chapter12/raw_text.txt`.
+- **Action**: Generated `chapter12/core-concept.md` summarizing rsync, CIFS, SSHFS, NFS, and Python SimpleHTTPServer.
+- **Action**: Used `active_practice_generator` to create 6 scenario-based tasks (`task-01.md` through `task-06.md`).
+- **Action**: User decided to skip Chapters 13, 14, 15, and 16, and will jump directly to Chapter 17 after this. Reason: These chapters cover Desktop Environments, Audio/Video, X11, and introductory C compilers, which are irrelevant to a modern SRE/Platform Engineer focused on infrastructure and automation.
+- **Action**: User completed all 6 tasks with 100% accuracy. Graded and closed out the chapter.
+- **Status**: Chapter 12 completed. Ready for Chapter 17.
