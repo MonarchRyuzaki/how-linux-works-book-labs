@@ -1,0 +1,6 @@
+services:
+  server:
+    build: .
+    container_name: ssl-broken-s04
+    ports:
+      - "9004:443"

@@ -1,0 +1,6 @@
+services:
+  server:
+    build: .
+    container_name: ssl-broken-s02
+    ports:
+      - "9002:443"
