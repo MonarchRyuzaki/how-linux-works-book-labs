@@ -28,6 +28,7 @@ RUN openssl genrsa -out /etc/nginx/ssl/real.key 2048 && \
 # Generate a DIFFERENT, UNRELATED key and name it server.key
 # nginx.conf will load server.crt (signed by real.key) and server.key (a different key) — MISMATCH
 RUN openssl genrsa -out /etc/nginx/ssl/server.key 2048
+RUN cp /etc/nginx/ssl/real.key /etc/nginx/ssl/server.key
 
 COPY nginx.conf /etc/nginx/nginx.conf
 EXPOSE 443

@@ -14,16 +14,10 @@ RUN openssl genrsa -out /etc/nginx/ssl/ca.key 2048 && \
 # Generate server key (PEM — correct format)
 RUN openssl genrsa -out /etc/nginx/ssl/server.key 2048
 
-# Generate PEM cert, then CONVERT to DER format
-# nginx.conf points to server.crt which is DER binary, not PEM text — nginx fails
 RUN openssl req -new -x509 -days 365 \
       -key /etc/nginx/ssl/server.key \
-      -out /tmp/server_pem.crt \
-      -subj "/CN=localhost" && \
-    openssl x509 \
-      -in /tmp/server_pem.crt \
       -out /etc/nginx/ssl/server.crt \
-      -outform DER
+      -subj "/CN=localhost"
 
 COPY nginx.conf /etc/nginx/nginx.conf
 EXPOSE 443

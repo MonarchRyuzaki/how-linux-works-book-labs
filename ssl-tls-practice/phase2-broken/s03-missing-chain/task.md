@@ -32,13 +32,18 @@ Verify return code: 20 (unable to get local issuer certificate)
    - What files exist in `/etc/nginx/ssl/`?
    - Who signed `server.crt`? Who signed `inter-ca.crt`?
 
+=>  server, root-ca, inter-ca crt, key, csr and srl.
+=>  server.crt is signed by inter-ca , inter-ca.crt is signed by root-ca.
+
 2. **Explain** why the client can't verify. (Hint: what is nginx actually sending?)
+=> nginx is only sending server.crt not inter-ca.crt
 
 3. **Fix it**: Build a `fullchain.crt` that bundles the server cert + intermediate cert,
    and update `nginx.conf` to use it.
+=> Did it 
 
 4. **Verify** the full chain is now sent by the server.
-
+=> Did it
 ## Hints
 
 <details>

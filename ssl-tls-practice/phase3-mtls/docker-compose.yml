@@ -1,0 +1,24 @@
+services:
+  server:
+    build: ./server
+    container_name: mtls-server
+    networks:
+      - mtls-net
+    volumes:
+      - ./ssl:/etc/nginx/ssl:ro
+
+  client:
+    build: ./client
+    container_name: mtls-client
+    networks:
+      - mtls-net
+    volumes:
+      - ./ssl:/ssl:ro
+    # Keep alive so we can exec into it
+    stdin_open: true
+    tty: true
+    command: sh
+
+networks:
+  mtls-net:
+    driver: bridge

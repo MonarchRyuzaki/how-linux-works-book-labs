@@ -1,0 +1,12 @@
+services:
+  server:
+    build: .
+    container_name: ssl-lab-phase1
+    ports:
+      - "8080:80"
+      - "8443:443"
+    volumes:
+      # Edit nginx.conf on the host, changes reflect instantly inside container
+      - ./nginx.conf:/etc/nginx/nginx.conf:rw
+      # Drop generated certs here on the host; container reads from /etc/nginx/ssl/
+      - ./ssl:/etc/nginx/ssl:rw
